@@ -1,0 +1,9 @@
+<div *ngFor="let character of characters" (click)="onCharacterSelect(character.id)">
+  <mat-card>
+    <img mat-card-image [src]="character.image" alt="{{ character.name }}" />
+    <mat-card-content>
+      <h3>{{ character.name }}</h3>
+      <p>{{ character.house }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
