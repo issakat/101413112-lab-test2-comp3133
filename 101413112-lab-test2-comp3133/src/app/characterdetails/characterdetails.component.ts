@@ -6,8 +6,8 @@ import {MatCard, MatCardContent, MatCardImage} from '@angular/material/card';
 
 @Component({
   selector: 'app-characterdetails',
-  standalone: true,  // Marking the component as standalone
-  imports: [CommonModule, MatCardContent, MatCard, MatCardImage],  // Importing necessary modules
+  standalone: true,
+  imports: [CommonModule, MatCardContent, MatCard, MatCardImage],
   templateUrl: './characterdetails.component.html',
   styleUrls: ['./characterdetails.component.css']
 })

@@ -25,13 +25,10 @@ export class CharacterListComponent implements OnInit {
     });
   }
 
-  // Method to handle character selection
   onCharacterSelect(id: string): void {
-    this.router.navigate(['/character', id]);  // Navigate to the character details page with the selected character's id
+    this.router.navigate(['/character', id]);
   }
 
-  // You may want to implement filtering logic here
-  // Example: You could set filteredCharacters to a subset based on user input
   onFilterChange(house: string): void {
     if (house === 'None') {
       this.filteredCharacters = this.characters;

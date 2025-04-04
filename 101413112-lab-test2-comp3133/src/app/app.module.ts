@@ -4,8 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { AppComponent } from './app.component';  // Standalone component
-import { CharacterListComponent } from './characterlist/characterlist.component';  // Standalone component
-import { CharacterDetailsComponent } from './characterdetails/characterdetails.component';  // Standalone component
+import { CharacterListComponent } from './characterlist/characterlist.component';
+import { CharacterDetailsComponent } from './characterdetails/characterdetails.component';
 
 @NgModule({
   imports: [
@@ -13,9 +13,7 @@ import { CharacterDetailsComponent } from './characterdetails/characterdetails.c
     HttpClientModule,
     MatCardModule,
     MatButtonModule,
-    // Remove the declarations array
   ],
   providers: [],
-  // Remove the bootstrap array
 })
 export class AppModule { }

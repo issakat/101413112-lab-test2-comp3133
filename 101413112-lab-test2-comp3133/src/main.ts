@@ -6,7 +6,6 @@ import { CharacterService } from './app/character.service';
 import { HttpClientModule } from '@angular/common/http';
 import { provideRouter, Route } from '@angular/router';
 
-// Define the routes directly in the main.ts file
 const routes: Route[] = [
   { path: '', component: CharacterListComponent },
   { path: 'character/:id', component: CharacterDetailsComponent }
@@ -16,6 +15,6 @@ bootstrapApplication(AppComponent, {
   providers: [
     CharacterService,
     HttpClientModule,
-    provideRouter(routes) // Add routes using `provideRouter`
+    provideRouter(routes)
   ]
 }).catch(err => console.error(err));

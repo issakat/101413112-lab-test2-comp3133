@@ -12,14 +12,12 @@ export class CharacterService {
 
   constructor(private http: HttpClient) {}
 
-  // Method to get all characters
   getAllCharacters(): Observable<Character[]> {
     return this.http.get<Character[]>(this.apiUrl);
   }
 
-  // Method to get a character by ID
   getCharacterById(id: string): Observable<Character> {
-    const url = `${this.apiUrl}/${id}`;  // API endpoint for a specific character
+    const url = `${this.apiUrl}/${id}`;
     return this.http.get<Character>(url);
   }
 }

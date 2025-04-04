@@ -7,26 +7,25 @@ import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-characterlist',
-  standalone: true,  // Marking the component as standalone
-  imports: [CommonModule, MatCardModule],  // Import necessary modules like CommonModule and MatCardModule
+  standalone: true,
+  imports: [CommonModule, MatCardModule],
   templateUrl: './characterlist.component.html',
   styleUrls: ['./characterlist.component.css']
 })
 export class CharacterListComponent implements OnInit {
-  @Input() characters: Character[] = [];  // Declare 'characters' as an @Input property
+  @Input() characters: Character[] = [];
   filteredCharacters: Character[] = [];
 
   constructor(private characterService: CharacterService, private router: Router) {}
 
   ngOnInit(): void {
-    // If 'characters' is not provided via input, fetch from service
     if (this.characters.length === 0) {
       this.characterService.getAllCharacters().subscribe(data => {
         this.characters = data;
-        this.filteredCharacters = data;  // Initialize filtered characters with all characters initially
+        this.filteredCharacters = data;
       });
     } else {
-      this.filteredCharacters = this.characters;  // If characters are passed in, use them directly
+      this.filteredCharacters = this.characters;
     }
   }
 
